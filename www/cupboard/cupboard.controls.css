@@ -1,0 +1,195 @@
+
+/* Панели управления секциями */
+
+div.section-pane-update {
+	border: 2px solid #02EC18;
+}
+
+div.cupboard-control-sections button {
+	white-space: nowrap;
+}
+
+div.section-pane-update table td.body {
+	padding: 5px;
+}
+
+div.cupboard-control-sections table.group-control-sections td.control {
+	padding: 0px 10px 0px 0px;
+}
+
+div.cupboard-control-sections table.group-control-sections input,
+div.cupboard-control-sections table.group-control-sections select {
+	width: 100%;
+	height: 22px;
+}
+
+div.cupboard-control-sections div.section-pane-update div.label {
+	white-space: nowrap;
+}
+
+div.cupboard-control-sections div.section-pane-update table.header {
+	width: 100%;
+	background-color: #02EC18;
+	color: white;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+div.cupboard-control-sections div.section-pane-update table.header td {
+	padding: 5px;
+}
+
+div.cupboard-control-sections div.section-pane-update table.header span.width {
+	font-weight: normal;
+	font-size: 90%;
+}
+
+div.cupboard-control-sections div.section-pane-update td.body td.col1 {
+	width: 80px;
+	padding: 0px 5px 0px 0px;
+}
+
+div.cupboard-control-sections div.section-pane-update td.body td.col2 {
+	width: 210px;
+}
+
+div.cupboard-control-sections div.section-pane-update td.body td.col2 div.baskets table {
+	width: 100%;
+}
+
+div.cupboard-control-sections div.section-pane-update td.body td.col2 div.baskets table td.baskets {
+	padding: 0px 5px 0px 0px;
+}
+
+div.cupboard-control-sections div.section-pane-update td.body td.col2 div.baskets table td.baskets,
+div.cupboard-control-sections div.section-pane-update td.body td.col2 div.baskets table td.basket {
+	width: 50%;
+}
+
+/* Панели управления дверям */
+
+div.cupboard-control-doors {
+	margin: 10px 0px 0px 0px;
+}
+
+div.door-pane-update {
+	border: 2px solid #02EC18;
+}
+
+div.cupboard-control-doors button {
+	white-space: nowrap;
+}
+
+div.door-pane-update table td.body {
+	padding: 5px;
+}
+
+div.cupboard-control-doors table.group-control-doors td.control {
+	padding: 0px 10px 0px 0px;
+}
+
+div.cupboard-control-doors table.group-control-doors select {
+	width: 100%;
+	height: 22px;
+}
+
+div.cupboard-control-doors div.door-pane-update div.label {
+	white-space: nowrap;
+}
+
+div.cupboard-control-doors div.door-pane-update table.header {
+	width: 100%;
+	background-color: #02EC18;
+	color: white;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+div.cupboard-control-doors div.door-pane-update table.header td {
+	padding: 5px;
+}
+
+div.cupboard-control-doors div.door-pane-update td.body td.col1 {
+	width: 80px;
+	padding: 0px 5px 0px 0px;
+}
+
+div.cupboard-control-doors div.door-pane-update td.body td.col2 {
+	width: 140px;
+}
+
+div.cupboard-control-doors div.door-pane-update td.body td.col2 div.baskets table {
+	width: 100%;
+}
+
+div.cupboard-control-doors div.door-pane-update td.body td.col2 div.baskets table td.baskets {
+	padding: 0px 5px 0px 0px;
+}
+
+div.cupboard-control-doors div.door-pane-update td.body td.col2 div.baskets table td.baskets,
+div.cupboard-control-doors div.door-pane-update td.body td.col2 div.baskets table td.basket {
+	width: 50%;
+}
+
+/* Параметры */
+
+div.pane-params {
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #02EC18;
+}
+
+div.pane-params-material {
+	margin: 0px 0px 10px 0px;
+	border: 2px solid #CEFFD3;
+	background-color: #CEFFD3;
+}
+
+div.pane-params td.price {
+	font-size: 230%;
+}
+
+div.pane-params label {
+	white-space: nowrap;
+}
+
+div.pane-params input.w100 {
+	width: 100%;
+}
+
+div.field {
+	position: relative;
+}
+
+div.field img.spin {
+	position: absolute;
+	top: 0px; right: 0px;
+}
+
+div.red div.pane-params {
+	border: 2px solid #EB3D00;
+}
+
+div.pane-params table {
+	width: 100%;
+}
+
+div.pane-params table td.body {
+	padding: 5px;
+}
+
+div.red div.pane-params table td.body,
+div.red div.pane-params table.body {
+	color: #EB3D00;
+}
+
+div.pane-params td.header {
+	padding: 5px;
+	color: white;
+	background-color: #02EC18;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+div.red div.pane-params td.header {
+	background-color: #EB3D00;
+}

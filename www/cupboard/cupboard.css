@@ -1,0 +1,153 @@
+
+@import "cupboard.box0.css";
+@import "cupboard.box1.css";
+@import "cupboard.inside.css";
+@import "cupboard.controls.css";
+@import "cupboard.print.css";
+
+/* Основа */
+
+html, body { height: 100%; width: 100%; padding: 0px; margin: 0px; }
+table.layout { border-collapse: collapse; border: 0px; }
+table.layout td, table.layout th { padding: 0px; margin: 0px; }
+a:hover { text-decoration: none; }
+
+h1, h2, h3, p {
+	font-family: "Arial Narrow";
+}
+
+/* Шкаф */
+
+div.cupboard {
+	cursor: default;
+}
+
+div.cupboard,
+div.cupboard-control-sections,
+div.cupboard-control-sections input,
+div.cupboard-control-sections select,
+div.cupboard-control-doors,
+div.cupboard-control-doors input,
+div.cupboard-control-doors select,
+div.pane-params,
+div.pane-params input,
+div.pane-params select {
+	font-family: "Arial Narrow";
+}
+
+div.cupboard table.box {
+	height: 100%;
+	background-color: #58595b;
+}
+
+div.cupboard-clones {
+	display: none;
+}
+
+/* Каркас */
+
+div.container {
+	width: 100%;
+	float: left;
+	margin-right: -300px;
+}
+
+div.content {
+	overflow: auto;
+	margin-right: 300px;
+	padding: 10px;
+}
+
+div.sidebar {
+	width: 300px;
+	float: right;
+}
+
+div.footer {
+	overflow: auto;
+	clear: both; 
+	padding: 0px 10px 10px 10px;
+}
+
+/* Высота шкафа */
+
+div.cupboard table.inside,
+div.cupboard table.box1 table.box1e2,
+div.cupboard table.sizeh {
+	height: 300px;
+}
+
+/* Управлялки секциями */
+
+div.cupboard div.control-section {
+	position: absolute;
+	left: 0px; top: 0px; 
+	width: 10px; height: 100%;
+	cursor: e-resize;
+	background-color1: cyan;
+}
+
+/* Размерные указатели В*Ш*Г шкафа */
+
+div.cupboard table.sizeh {
+	position: absolute;
+	left: 50px; top: 5px; 
+}
+
+div.cupboard span.sizeh,
+div.cupboard span.sizeg,
+div.cupboard span.sizew {
+	white-space: nowrap;
+}
+
+/* О программе */
+
+div.cupboard-about-form-background {
+	display: none;
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%;
+	background-color: white;
+	z-index: 3000;
+}
+
+table.cupboard-about-form {
+	display: none;
+	position: absolute;
+	left: 0px; top: 0px;
+	width: 100%; height: 100%;
+	z-index: 3001;
+}
+
+table.cupboard-about-form table.form {
+	background-color: white;
+	width: 600px;
+	border: 2px solid #02EC18;
+	font-family: "Arial Narrow";
+}
+
+table.cupboard-about-form table.form td.header h2 {
+	margin: 0px;
+}
+
+table.cupboard-about-form table.form td.header {
+	width: 100%;
+	background-color: #02EC18;
+	color: white;
+	font-size: 120%;
+	font-weight: bold;
+	padding: 5px;
+}
+
+table.cupboard-about-form table.form td.body {
+	padding: 20px;
+}
+
+/* Бегущая строка */
+
+marquee span {
+	font-family: "Arial Narrow";
+	background-color: yellow;
+	padding: 0px 30px 0px 30px;
+	font-size: 80%;
+}

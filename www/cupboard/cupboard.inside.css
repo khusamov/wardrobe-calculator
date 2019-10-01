@@ -1,0 +1,75 @@
+
+/* Внутри секции */
+
+div.cupboard table.inside {
+	width: 100%;
+}
+
+/* Корзины */
+
+div.cupboard table.inside tr.basket1 td {
+	background-image: url(images/basket1.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+div.cupboard table.inside tr.basket2 td {
+	height: 29px;
+	background-image: url(images/basket2.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+/* Полки */
+
+div.cupboard table.inside div.pans {
+	width: 100%; height: 100%; 
+	position: relative;
+}
+
+div.cupboard table.inside div.pan-box0e12 {
+	position: absolute;
+	left: 0px; top: 0px; 
+	width: 100%; height: 26px;
+	background-image: url(images/box0e12.gif);
+	background-repeat: repeat-x;
+	background-position: top center;
+}
+
+div.cupboard table.inside div.pan-box0e12 div.box0e11 {
+	width: 100%; height: 100%;
+	background-image: url(images/box0e11.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+	display: none;
+}
+
+div.cupboard table.inside div.pan {
+	position: absolute;
+	left: 0px; top: 0px; 
+	width: 100%; height: 34px;
+	background-image: url(images/pan.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	cursor: n-resize;
+}
+
+/* Вешалки */
+
+div.cupboard table.inside div.hanger1 {
+	position: absolute;
+	left: 0px; top: 37px; 
+	width: 100%; height: 33px;
+	background-image: url(images/hanger1.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+div.cupboard table.inside div.hanger2 {
+	position: absolute;
+	left: 0px; top: 50px; 
+	width: 100%; height: 33px;
+	background-image: url(images/hanger2.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}

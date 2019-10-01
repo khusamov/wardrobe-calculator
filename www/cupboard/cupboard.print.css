@@ -1,0 +1,35 @@
+
+div.cupboard-print {
+	display: none;
+	padding: 20px;
+	font-family: "Arial Narrow";
+}
+
+@media print {
+	div.cupboard-print div.buttons {
+		display: none;
+	}
+}
+
+div.cupboard-print p.price {
+	font-size: 200%;
+}
+
+div.cupboard-print table.data {
+	border-top: 1px dashed black;
+	border-left: 1px dashed black;
+}
+
+div.cupboard-print table.data td {
+	padding: 5px;
+	border-bottom: 1px dashed black;
+	border-right: 1px dashed black;
+}
+
+div.cupboard-print span.browser {
+	display: none;
+}
+
+div.cupboard-print span.firefox {
+	display: inline;
+}

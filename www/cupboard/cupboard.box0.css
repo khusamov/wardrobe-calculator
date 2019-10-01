@@ -1,0 +1,92 @@
+
+/* Оболочка шкафа */
+
+div.cupboard table.box1 div.box1 {
+	width: 100%;
+	height: 100%;
+}
+
+div.cupboard table.box1 td.box1e1 {
+	height: 8px;
+	font-size: 0px;
+}
+
+div.cupboard table.box1 td.box1e3 {
+	height: 46px;
+}
+
+/* Стенки */
+
+div.cupboard table.box1 td.box1e21 {
+	width: 8px;
+}
+
+div.cupboard table.box1 td.box1e23 {
+	width: 47px;
+}
+
+div.cupboard table.box1 div.box1e11 {
+	background-image: url(images/box1e11.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+div.cupboard table.box1 div.box1e12 {
+	background-image: url(images/box1e12.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+div.cupboard table.box1 div.box1e13 {
+	background-image: url(images/box1e13.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+div.cupboard table.box1 div.box1e21a {
+	background-image: url(images/box1e21a.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+div.cupboard table.box1 div.box1e21b {
+	background-image: url(images/box1e21b.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+
+div.cupboard table.box1 div.box1e23a {
+	background-image: url(images/box1e23a.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+div.cupboard table.box1 div.box1e23b {
+	background-image: url(images/box1e23b.gif);
+	background-repeat: repeat-y;
+	background-position: right top;
+}
+
+div.cupboard table.box1 div.box1e23c {
+	background-image: url(images/box1e23c.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+div.cupboard table.box1 div.box1e31 {
+	background-image: url(images/box1e31.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+div.cupboard table.box1 div.box1e32 {
+	background-image: url(images/box1e32.gif);
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+div.cupboard table.box1 div.box1e33 {
+	background-image: url(images/box1e33.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}

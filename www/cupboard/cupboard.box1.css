@@ -1,0 +1,75 @@
+
+/* Секции */
+
+div.cupboard table.box td.section {
+	width: 100px;
+}
+
+div.cupboard table.box td.end div.box,
+div.cupboard table.box td.section div.box {
+	width: 100%;
+	height: 100%;
+}
+
+div.cupboard table.box td.pane1e2a {
+	width: 8px;
+	background-image: url(images/pane1e2a.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+
+/* Секция */
+
+div.cupboard table.box td.section div.box0e32 {
+	background-image: url(images/box0e32.gif);
+	background-repeat: repeat-x;
+	background-position: bottom center;
+}
+
+div.cupboard table.box td.section div.box0e12 {
+	background-image: url(images/box0e12.gif);
+	background-repeat: repeat-x;
+	background-position: top center;
+}
+
+div.cupboard table.box td.section div.pane1e1 {
+	background-image: url(images/pane1e1.gif);
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+div.cupboard table.box td.section div.pane1e2 {
+	background-image: url(images/pane1e2.gif);
+	background-repeat: repeat-y;
+	background-position: center left;
+}
+
+div.cupboard table.box td.section div.pane1e3 {
+	background-image: url(images/pane1e3.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+
+/* Секция / Последняя стенка */		
+
+div.cupboard table.box td.end {
+	width: 26px;
+}						
+
+div.cupboard table.box td.end div.box0e23 {
+	background-image: url(images/box0e23.gif);
+	background-repeat: repeat-y;
+	background-position: right center;
+}
+
+div.cupboard table.box td.end div.box0e13 {
+	background-image: url(images/box0e13.gif);
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+div.cupboard table.box td.end div.box0e33 {
+	background-image: url(images/box0e33.gif);
+	background-repeat: no-repeat;
+	background-position: bottom right;
+}

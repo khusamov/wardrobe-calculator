@@ -1,0 +1,23 @@
+{
+  "name": "wardrobe-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khusamov/wardrobe-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khusamov/wardrobe-calculator/issues"
+  },
+  "homepage": "https://github.com/khusamov/wardrobe-calculator#readme",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

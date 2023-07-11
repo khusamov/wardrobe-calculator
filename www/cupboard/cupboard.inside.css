@@ -1,11 +1,11 @@
 
-/* Внутри секции */
+/* Р’РЅСѓС‚СЂРё СЃРµРєС†РёРё */
 
 div.cupboard table.inside {
 	width: 100%;
 }
 
-/* Корзины */
+/* РљРѕСЂР·РёРЅС‹ */
 
 div.cupboard table.inside tr.basket1 td {
 	background-image: url(images/basket1.gif);
@@ -20,7 +20,7 @@ div.cupboard table.inside tr.basket2 td {
 	background-position: left bottom;
 }
 
-/* Полки */
+/* РџРѕР»РєРё */
 
 div.cupboard table.inside div.pans {
 	width: 100%; height: 100%; 
@@ -54,7 +54,7 @@ div.cupboard table.inside div.pan {
 	cursor: n-resize;
 }
 
-/* Вешалки */
+/* Р’РµС€Р°Р»РєРё */
 
 div.cupboard table.inside div.hanger1 {
 	position: absolute;

@@ -2,7 +2,7 @@
 div.cupboard-print {
 	display: none;
 	padding: 20px;
-	font-family: "Arial Narrow";
+	font-family: "Arial Narrow", serif;
 }
 
 @media print {

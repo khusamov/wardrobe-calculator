@@ -1,19 +1,19 @@
 
 var cupboard = {
-	sections: new Array(), // Секции - база
-	first: null, // Ссылка на первую секцию в базе
-	last: null, // Ссылка на последнюю добавленную секцию в базе
-	endwall: null, // Замыкающая стенка
-	sizew: null, // Ширина кеш
-	sizeg: null, // Глубина кеш
-	sizeh: null, // Высота кеш
-	sectionmin: 35, // Минимальная ширина секции
-	sectionmax: 150, // Максимальная ширина секции
+	sections: new Array(), // РЎРµРєС†РёРё - Р±Р°Р·Р°
+	first: null, // РЎСЃС‹Р»РєР° РЅР° РїРµСЂРІСѓСЋ СЃРµРєС†РёСЋ РІ Р±Р°Р·Рµ
+	last: null, // РЎСЃС‹Р»РєР° РЅР° РїРѕСЃР»РµРґРЅСЋСЋ РґРѕР±Р°РІР»РµРЅРЅСѓСЋ СЃРµРєС†РёСЋ РІ Р±Р°Р·Рµ
+	endwall: null, // Р—Р°РјС‹РєР°СЋС‰Р°СЏ СЃС‚РµРЅРєР°
+	sizew: null, // РЁРёСЂРёРЅР° РєРµС€
+	sizeg: null, // Р“Р»СѓР±РёРЅР° РєРµС€
+	sizeh: null, // Р’С‹СЃРѕС‚Р° РєРµС€
+	sectionmin: 35, // РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё
+	sectionmax: 150, // РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР° СЃРµРєС†РёРё
 	price: 0,
 	params: {},
 	tables: {},
 	prices: {},
-	print: false // Инициализации печати не было, если false
+	print: false // РРЅРёС†РёР°Р»РёР·Р°С†РёРё РїРµС‡Р°С‚Рё РЅРµ Р±С‹Р»Рѕ, РµСЃР»Рё false
 }
 
 $(function() {
@@ -28,28 +28,28 @@ $(function() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// О ПРОГРАММЕ
+// Рћ РџР РћР“Р РђРњРњР•
 
 function cupboardAboutFormShow() {
-	// Открыть фон
+	// РћС‚РєСЂС‹С‚СЊ С„РѕРЅ
 	$("div.cupboard-about-form-background")
 		.css("opacity", 0.7)
 		.height($("body").attr("scrollHeight"))
 		.show();
-	// Открыть форму
+	// РћС‚РєСЂС‹С‚СЊ С„РѕСЂРјСѓ
 	$("table.cupboard-about-form").show();
 }
 
 function cupboardAboutFormHide() {
-	// Скрыть форму
+	// РЎРєСЂС‹С‚СЊ С„РѕСЂРјСѓ
 	$("table.cupboard-about-form").hide();
-	// Скрыть фон
+	// РЎРєСЂС‹С‚СЊ С„РѕРЅ
 	$("div.cupboard-about-form-background").hide();
 }
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// ИНИЦИАЛИЗАЦИЯ ШКАФА
+// РРќРР¦РРђР›РР—РђР¦РРЇ РЁРљРђР¤Рђ
 
 function cupboardInit() {
 	$("div.cupboard-clones table.box1").clone().appendTo("div.cupboard");
@@ -100,16 +100,16 @@ function cupboardInit() {
 	cupboardInsertDoorControlPaneInsert();
 	cupboardInitBrace();
 	cupboardSetSpines();
-	// Выставление значений по умолчанию
-	cupboard.params.sizeh.val(250); // Высота шкафа по умолчанию
-	cupboard.params.sizeg.val(50); // Глубина шкафа по умолчанию
+	// Р’С‹СЃС‚Р°РІР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	cupboard.params.sizeh.val(250); // Р’С‹СЃРѕС‚Р° С€РєР°С„Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	cupboard.params.sizeg.val(50); // Р“Р»СѓР±РёРЅР° С€РєР°С„Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	cupboard.params.sizeh.change(cupboardSizeHOnChange);
 	cupboard.params.sizeg.change(cupboardSizeGOnChange);
 	cupboard.params.sizeh.change();
 	cupboard.params.sizeg.change();
 	cupboardInsertSection();
 	cupboardInsertDoor();
-	// Подсчитать
+	// РџРѕРґСЃС‡РёС‚Р°С‚СЊ
 	cupboardCalculate();
 }
 
@@ -127,7 +127,7 @@ function cupboardSizeHOnChange() {
 		cupboardCalculate();		
 	} else {
 		this.value = 200;
-		alert("Введите положительное числовое значение!");
+		alert("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ!");
 	}
 }
 
@@ -137,12 +137,12 @@ function cupboardSizeGOnChange() {
 		cupboardCalculate();		
 	} else {
 		this.value = 50;
-		alert("Введите положительное числовое значение!");
+		alert("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ!");
 	}
 }
 
-// РАСПОРКА
-// Инициализация распорки
+// Р РђРЎРџРћР РљРђ
+// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЂР°СЃРїРѕСЂРєРё
 
 function cupboardInitBrace() {
 	var widthbox1 = 0;
@@ -152,8 +152,8 @@ function cupboardInitBrace() {
 	$("div.cupboard-brace").width(widthbox1);
 }
 
-// Выставление высоты шкафа
-// Пока размер шкафа выставляется в файле cupboard.css
+// Р’С‹СЃС‚Р°РІР»РµРЅРёРµ РІС‹СЃРѕС‚С‹ С€РєР°С„Р°
+// РџРѕРєР° СЂР°Р·РјРµСЂ С€РєР°С„Р° РІС‹СЃС‚Р°РІР»СЏРµС‚СЃСЏ РІ С„Р°Р№Р»Рµ cupboard.css
 /*
 function cupboardSetHeight(height) {
 	$("div.cupboard table.box1 table.box1e2").height(height);
@@ -161,54 +161,54 @@ function cupboardSetHeight(height) {
 }
 */
 
-// Добавление секции
+// Р”РѕР±Р°РІР»РµРЅРёРµ СЃРµРєС†РёРё
 
 function cupboardInsertSection() {
 	var first = true;
 	var pane1e2a = null;
-	// Если есть секции, то вставляем разделитель секций
+	// Р•СЃР»Рё РµСЃС‚СЊ СЃРµРєС†РёРё, С‚Рѕ РІСЃС‚Р°РІР»СЏРµРј СЂР°Р·РґРµР»РёС‚РµР»СЊ СЃРµРєС†РёР№
 	if($("div.cupboard tr.sections td.section").size()) {
 		pane1e2a = $("<td class='pane1e2a'>&nbsp;</td>");
 		cupboard.endwall.before(pane1e2a);
 		first = false;
 	}
-	// Вставка секции из клона и вставка внутренностей секции
+	// Р’СЃС‚Р°РІРєР° СЃРµРєС†РёРё РёР· РєР»РѕРЅР° Рё РІСЃС‚Р°РІРєР° РІРЅСѓС‚СЂРµРЅРЅРѕСЃС‚РµР№ СЃРµРєС†РёРё
 	var section = $("<td class='section'></td>");
 	cupboard.endwall.before(section);
 	$("div.cupboard-clones div.pane1e2").clone().appendTo(section)
 		.find("div.pane1e3").append($("div.cupboard-clones table.inside").clone());
-	// Особые действия для первой секции
+	// РћСЃРѕР±С‹Рµ РґРµР№СЃС‚РІРёСЏ РґР»СЏ РїРµСЂРІРѕР№ СЃРµРєС†РёРё
 	if (first) {
 		$("div.box0e11", section).show();
 	}
-	// Удлиняем распорку
+	// РЈРґР»РёРЅСЏРµРј СЂР°СЃРїРѕСЂРєСѓ
 	var brace = $("div.cupboard-brace");
 	brace.width(brace.width() + 100);
 	if (!first) {brace.width(brace.width() + 8);}
-	// Сохраняем в базе ссылку на секцию
+	// РЎРѕС…СЂР°РЅСЏРµРј РІ Р±Р°Р·Рµ СЃСЃС‹Р»РєСѓ РЅР° СЃРµРєС†РёСЋ
 	section = {
 		id: cupboard.sections.length,
 		pred: cupboard.last,
 		next: null,
 		td: section,
 		width: 100,
-		control: null, // Ссылка на управлялку секцией
-		controlpane: null, // Ссылка на панель управления секцией
-		first: first, // Если равна true, то это первая на деревне секция
-		baskets: 0, // Количество корзин в секции
-		basket: 0, // Тип корзин в секции
-		pans: 0, // Количество полок в секции
-		hanger: 0, // Тип вешалки, null если нет вешалки
-		pane1e2a: pane1e2a // Ссылка на стенку слева, если не первая секция
+		control: null, // РЎСЃС‹Р»РєР° РЅР° СѓРїСЂР°РІР»СЏР»РєСѓ СЃРµРєС†РёРµР№
+		controlpane: null, // РЎСЃС‹Р»РєР° РЅР° РїР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёРµР№
+		first: first, // Р•СЃР»Рё СЂР°РІРЅР° true, С‚Рѕ СЌС‚Рѕ РїРµСЂРІР°СЏ РЅР° РґРµСЂРµРІРЅРµ СЃРµРєС†РёСЏ
+		baskets: 0, // РљРѕР»РёС‡РµСЃС‚РІРѕ РєРѕСЂР·РёРЅ РІ СЃРµРєС†РёРё
+		basket: 0, // РўРёРї РєРѕСЂР·РёРЅ РІ СЃРµРєС†РёРё
+		pans: 0, // РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РѕРє РІ СЃРµРєС†РёРё
+		hanger: 0, // РўРёРї РІРµС€Р°Р»РєРё, null РµСЃР»Рё РЅРµС‚ РІРµС€Р°Р»РєРё
+		pane1e2a: pane1e2a // РЎСЃС‹Р»РєР° РЅР° СЃС‚РµРЅРєСѓ СЃР»РµРІР°, РµСЃР»Рё РЅРµ РїРµСЂРІР°СЏ СЃРµРєС†РёСЏ
 	};
 	if (!cupboard.first) cupboard.first = section;
 	if (cupboard.last) cupboard.last.next = section;
 	cupboard.last = section;
 	cupboard.sections[cupboard.sections.length] = section;
-	// Добавляем панель управления секцией
+	// Р”РѕР±Р°РІР»СЏРµРј РїР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёРµР№
 	cupboardInsertSectionControlPaneUpdate(section);
 	$("table.header span.width span", section.controlpane).text(section.td.width());
-	// Добавление управлялки секцией
+	// Р”РѕР±Р°РІР»РµРЅРёРµ СѓРїСЂР°РІР»СЏР»РєРё СЃРµРєС†РёРµР№
 	section.control = $("<div class='control-section' id='" + section.id + "'></div>").appendTo("div.cupboard div.boxinside");
 	section.control.draggable(
 		{
@@ -217,10 +217,10 @@ function cupboardInsertSection() {
 				var section = cupboard.sections[this.id];
 				var newwidth = ui.position.left - section.td.position().left
 				var offset = newwidth - section.td.width();
-				// Изменяем распорку
+				// РР·РјРµРЅСЏРµРј СЂР°СЃРїРѕСЂРєСѓ
 				var brace = $("div.cupboard-brace");
 				brace.width(brace.width() + offset);
-				// и секцию конечно тоже
+				// Рё СЃРµРєС†РёСЋ РєРѕРЅРµС‡РЅРѕ С‚РѕР¶Рµ
 				section.width = newwidth;
 				section.td.width(section.width);
 				$("table.header span.width span", section.controlpane).text(section.td.width());
@@ -230,17 +230,17 @@ function cupboardInsertSection() {
 			stop: cupboardSetSectionDragContainments
 		}
 	);
-	// Расставить управлялки
+	// Р Р°СЃСЃС‚Р°РІРёС‚СЊ СѓРїСЂР°РІР»СЏР»РєРё
 	cupboardSetSectionDragContainments();
-	// Обновить метки размеров
+	// РћР±РЅРѕРІРёС‚СЊ РјРµС‚РєРё СЂР°Р·РјРµСЂРѕРІ
 	cupboardUpdateSizeLabels();
 	cupboardCalculate();
 }
 
-// Обновление меток с размерами шкафа
+// РћР±РЅРѕРІР»РµРЅРёРµ РјРµС‚РѕРє СЃ СЂР°Р·РјРµСЂР°РјРё С€РєР°С„Р°
 
 function cupboardUpdateSizeLabels() {
-	// Расчет ширины шкафа
+	// Р Р°СЃС‡РµС‚ С€РёСЂРёРЅС‹ С€РєР°С„Р°
 	var section = cupboard.first;
 	var width = 0;
 	while (section) {
@@ -250,53 +250,53 @@ function cupboardUpdateSizeLabels() {
 	cupboard.sizew.text(width);
 }
 
-// Добавление замыкающей стенки
+// Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РјС‹РєР°СЋС‰РµР№ СЃС‚РµРЅРєРё
 
 function cupboardInsertSectionEnd() {
-	// Вставка замыкающей стенки
+	// Р’СЃС‚Р°РІРєР° Р·Р°РјС‹РєР°СЋС‰РµР№ СЃС‚РµРЅРєРё
 	cupboard.endwall = $('<td class="end"></td>').appendTo("div.cupboard tr.sections");
 	$("div.cupboard-clones div.box0e23").clone().appendTo(cupboard.endwall);
 }
 
-// Удаление секции
+// РЈРґР°Р»РµРЅРёРµ СЃРµРєС†РёРё
 
 function cupboardDeleteSection() {
 	if ($("div.cupboard tr.sections td.section").size() > 1) {
 		var update = $(this).parents("td.control");
 		var id = cupboardGetSectionIdFromSectionControlPane(this);
 		section = cupboard.sections[id];
-		// Особые действия, если это первая секция
+		// РћСЃРѕР±С‹Рµ РґРµР№СЃС‚РІРёСЏ, РµСЃР»Рё СЌС‚Рѕ РїРµСЂРІР°СЏ СЃРµРєС†РёСЏ
 		if (section.first && section.next) {
 			section.next.first = true;
 			cupboard.first = section.next;
 			$("div.box0e11", section.next.td).show();
-			if (section.next.pane1e2a) { // Удалить стенку между первой и следующей секциями
+			if (section.next.pane1e2a) { // РЈРґР°Р»РёС‚СЊ СЃС‚РµРЅРєСѓ РјРµР¶РґСѓ РїРµСЂРІРѕР№ Рё СЃР»РµРґСѓСЋС‰РµР№ СЃРµРєС†РёСЏРјРё
 				section.next.pane1e2a.remove();
 				section.next.pane1e2a = null;
 			}
 		}
-		// Переставить указатели в списке секций в базе
+		// РџРµСЂРµСЃС‚Р°РІРёС‚СЊ СѓРєР°Р·Р°С‚РµР»Рё РІ СЃРїРёСЃРєРµ СЃРµРєС†РёР№ РІ Р±Р°Р·Рµ
 		if (!section.next) cupboard.last = section.pred;
 		if (section.pred) section.pred.next = section.next;
 		if (section.next) section.next.pred = section.pred;
-		// Удалить секцию с визуала
+		// РЈРґР°Р»РёС‚СЊ СЃРµРєС†РёСЋ СЃ РІРёР·СѓР°Р»Р°
 		var width = section.td.width();
 		section.td.remove();
 		if (section.pane1e2a) { width += section.pane1e2a.width(); section.pane1e2a.remove(); }
-		// Сократить распорку
+		// РЎРѕРєСЂР°С‚РёС‚СЊ СЂР°СЃРїРѕСЂРєСѓ
 		var brace = $("div.cupboard-brace");
 		brace.width(brace.width() - width);
-		// Удалить управлялку секции с визуала
+		// РЈРґР°Р»РёС‚СЊ СѓРїСЂР°РІР»СЏР»РєСѓ СЃРµРєС†РёРё СЃ РІРёР·СѓР°Р»Р°
 		section.control.remove();
-		// Удалить секцию из базы
+		// РЈРґР°Р»РёС‚СЊ СЃРµРєС†РёСЋ РёР· Р±Р°Р·С‹
 		delete section;
-		// Удалить панель управления секцией
+		// РЈРґР°Р»РёС‚СЊ РїР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёРµР№
 		update.remove();
-		// Пересортировать управлялки заново
+		// РџРµСЂРµСЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ СѓРїСЂР°РІР»СЏР»РєРё Р·Р°РЅРѕРІРѕ
 		cupboardSetSectionDragContainments();
-		// Обновить метки размеров шкафа
+		// РћР±РЅРѕРІРёС‚СЊ РјРµС‚РєРё СЂР°Р·РјРµСЂРѕРІ С€РєР°С„Р°
 		cupboardUpdateSizeLabels();
-		// Перенумеровать
+		// РџРµСЂРµРЅСѓРјРµСЂРѕРІР°С‚СЊ
 		$("div.cupboard-control-sections td.control").each(function(i){
 			$("span.number", this).text(i + 1);
 		});
@@ -304,16 +304,16 @@ function cupboardDeleteSection() {
 	}
 }
 
-// Добавление панельки добавления новой секции
+// Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РЅРµР»СЊРєРё РґРѕР±Р°РІР»РµРЅРёСЏ РЅРѕРІРѕР№ СЃРµРєС†РёРё
 
 function cupboardInsertSectionControlPaneInsert() {
 	var group = $("div.cupboard-clones table.group-control-sections").clone();
 	$("div.cupboard-control-sections").append(group);
-	$("td", group).append("<div><button>Добавить секцию</button></div>")
+	$("td", group).append("<div><button>Р”РѕР±Р°РІРёС‚СЊ СЃРµРєС†РёСЋ</button></div>")
 		.find("button").click(cupboardInsertSection);
 }
 
-// Раставить и ограничить управлялки секциями
+// Р Р°СЃС‚Р°РІРёС‚СЊ Рё РѕРіСЂР°РЅРёС‡РёС‚СЊ СѓРїСЂР°РІР»СЏР»РєРё СЃРµРєС†РёСЏРјРё
 
 function cupboardSetSectionDragContainments() {
 	var sections = cupboard.sections;
@@ -330,7 +330,7 @@ function cupboardSetSectionDragContainments() {
 	}
 }
 
-// Добавление панельки управления секцией
+// Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РЅРµР»СЊРєРё СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёРµР№
 
 function cupboardInsertSectionControlPaneUpdate(section) {
 	section.controlpane = $("<td class='control update'></td>");
@@ -338,17 +338,17 @@ function cupboardInsertSectionControlPaneUpdate(section) {
 	var update = $("div.cupboard-clones div.section-pane-update").clone();
 	section.controlpane.append(update);
 	$("span.number", update).attr("id", section.id);
-	// Перенумеровать
+	// РџРµСЂРµРЅСѓРјРµСЂРѕРІР°С‚СЊ
 	$("div.cupboard-control-sections td.control").each(function(i){
 		$("span.number", this).text(i + 1);
 	});
-	// Обработчики
+	// РћР±СЂР°Р±РѕС‚С‡РёРєРё
 	$("button.delete", update).click(cupboardDeleteSection);
 	$("input.baskets", update).change(cupboardInputBasketsOnChange);
 	$("select.basket", update).change(cupboardSelectBasketOnChange);
 	$("input.pans", update).change(cupboardInputPansOnChange);
 	$("select.hanger", update).change(cupboardSelectHangerOnChange);
-	// Установка спин-управления полями ввода
+	// РЈСЃС‚Р°РЅРѕРІРєР° СЃРїРёРЅ-СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»СЏРјРё РІРІРѕРґР°
 	var divfields = $("div.field", update).not(":has(select)");	
 	for (var i = 0; i < divfields.size(); i++) {
 		var spinid = "spinsection" + i + section.id;
@@ -356,8 +356,8 @@ function cupboardInsertSectionControlPaneUpdate(section) {
 		divfield.append("<img class='spin' src='cupboard/images/spin.gif' border='0' usemap='#" + spinid + "'>");
 		divfield.append("\
 			<map name='" + spinid + "'>\
-				<area class='up' alt='Увеличить значение' coords='0,0,11,11' href='javascript:void(0)'>\
-				<area class='down' alt='Уменьшить значение' coords='0,11,11,22' href='javascript:void(0)'>\
+				<area class='up' alt='РЈРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ' coords='0,0,11,11' href='javascript:void(0)'>\
+				<area class='down' alt='РЈРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ' coords='0,11,11,22' href='javascript:void(0)'>\
 			</map>\
 		");
 		divfield.find("area.up").click(cupboardSpinAreaUpOnClick);
@@ -365,7 +365,7 @@ function cupboardInsertSectionControlPaneUpdate(section) {
 	}
 }
 
-// Обработчик параметра тип корзины
+// РћР±СЂР°Р±РѕС‚С‡РёРє РїР°СЂР°РјРµС‚СЂР° С‚РёРї РєРѕСЂР·РёРЅС‹
 
 function cupboardSelectBasketOnChange() {
 	var value = $(this).val();
@@ -378,7 +378,7 @@ function cupboardSelectBasketOnChange() {
 	cupboardCalculate();
 }
 
-// Обработчик параметра вешалка
+// РћР±СЂР°Р±РѕС‚С‡РёРє РїР°СЂР°РјРµС‚СЂР° РІРµС€Р°Р»РєР°
 
 function cupboardSelectHangerOnChange() {
 	var value = $(this).val();
@@ -386,7 +386,7 @@ function cupboardSelectHangerOnChange() {
 	var section = cupboard.sections[id];
 	var hanger;
 	if (section.hanger > 0) {
-		// Удалить вешалку
+		// РЈРґР°Р»РёС‚СЊ РІРµС€Р°Р»РєСѓ
 		section.hanger = 0;
 		hanger = $("table.inside div.hanger1, table.inside div.hanger2", section.td);
 		hanger.remove();
@@ -394,40 +394,40 @@ function cupboardSelectHangerOnChange() {
 	}
 	if (value > 0) {
 		section.hanger = value;
-		// Вставить новую вешалку
+		// Р’СЃС‚Р°РІРёС‚СЊ РЅРѕРІСѓСЋ РІРµС€Р°Р»РєСѓ
 		hanger = $("<div class='hanger" + value + "'>&nbsp;</div>").appendTo($("table.inside div.pans", section.td));
-		// Скорректировать полки
+		// РЎРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°С‚СЊ РїРѕР»РєРё
 		cupboardSetupPansInSection(section)
 	}
 	cupboardCalculate();
 }
 
-// Обработчик количества полок в секции
+// РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР»РѕРє РІ СЃРµРєС†РёРё
 
 function cupboardInputPansOnChange() {
 	var value = $(this).val();	
 	if (!isNaN(value) && value >= 0) {
 		var id = cupboardGetSectionIdFromSectionControlPane(this);
 		var section = cupboard.sections[id];
-		// Обновить число полок в секции в базе
+		// РћР±РЅРѕРІРёС‚СЊ С‡РёСЃР»Рѕ РїРѕР»РѕРє РІ СЃРµРєС†РёРё РІ Р±Р°Р·Рµ
 		section.pans = parseInt(value);
-		// Расставить заново
+		// Р Р°СЃСЃС‚Р°РІРёС‚СЊ Р·Р°РЅРѕРІРѕ
 		cupboardSetupPansInSection(section);
 		cupboardCalculate();
 	} else {
 		$(this).val(0);
-		alert("Введите положительное числовое значение!");
+		alert("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ!");
 	}
 }
 
-// Перераспределение полок в секции
+// РџРµСЂРµСЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ РїРѕР»РѕРє РІ СЃРµРєС†РёРё
 
 function cupboardSetupPansInSection(section) {
 	var value = section.pans;
-	// Удалить все полки
+	// РЈРґР°Р»РёС‚СЊ РІСЃРµ РїРѕР»РєРё
 	var pans = $("table.inside div.pan", section.td);
 	pans.remove();
-	// Расставить заново
+	// Р Р°СЃСЃС‚Р°РІРёС‚СЊ Р·Р°РЅРѕРІРѕ
 	var hanger = (section.hanger > 0) ? 57: 0;
 	var height = $("table.inside div.pans", section.td).height() - hanger;
 	var offset = 0, delta = 0;
@@ -448,7 +448,7 @@ function cupboardSetupPansInSection(section) {
 	cupboardSetupDragContainmentPansInSection(section);
 }
 
-// Перераспределение полей ограничений движения drag для полок секции
+// РџРµСЂРµСЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ РїРѕР»РµР№ РѕРіСЂР°РЅРёС‡РµРЅРёР№ РґРІРёР¶РµРЅРёСЏ drag РґР»СЏ РїРѕР»РѕРє СЃРµРєС†РёРё
 
 function cupboardSetupDragContainmentPansInSection(section) {
 	if (section.hanger === undefined) section = cupboard.sections[this.id];
@@ -473,46 +473,46 @@ function cupboardSetupDragContainmentPansInSection(section) {
 	});
 }
 
-// Обработчик количества корзин в секции
+// РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕР»РёС‡РµСЃС‚РІР° РєРѕСЂР·РёРЅ РІ СЃРµРєС†РёРё
 
 function cupboardInputBasketsOnChange() {
 	var value = $(this).val();	
 	if (!isNaN(value) && value >= 0) {
-		// Выставление значения соседа
+		// Р’С‹СЃС‚Р°РІР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃРѕСЃРµРґР°
 		var basket = $(this).parents("div.baskets").find("select.basket");
 		if (value > 0 && basket.val() <= 0) basket.val(1);
 		if (value <= 0 && basket.val() > 0) basket.val(0);
-		// Продолжаем
+		// РџСЂРѕРґРѕР»Р¶Р°РµРј
 		var id = cupboardGetSectionIdFromSectionControlPane(this);
 		var section = cupboard.sections[id];
 		var baskets = $("table.inside tr.basket2", section.td);
 		var change = value - baskets.size();
-		// Добавление корзин
+		// Р”РѕР±Р°РІР»РµРЅРёРµ РєРѕСЂР·РёРЅ
 		if (change > 0) {
 			if (baskets.size() == 0) $("table.inside tr", section.td).addClass("basket1");
 			for (var i = 1; i <= change; i++)
 				$("table.inside", section.td).append("<tr class='basket2'><td>&nbsp;</td></tr>");
 		}
-		// Удаление корзин
+		// РЈРґР°Р»РµРЅРёРµ РєРѕСЂР·РёРЅ
 		if (change < 0) {
 			change = Math.abs(change);
 			baskets = $("table.inside tr.basket2:lt(" + change + ")", section.td);
 			baskets.remove();
 			if (value == 0) $("table.inside tr.basket1", section.td).removeClass("basket1");
 		}
-		// Обновление числа корзин в секции в базе
+		// РћР±РЅРѕРІР»РµРЅРёРµ С‡РёСЃР»Р° РєРѕСЂР·РёРЅ РІ СЃРµРєС†РёРё РІ Р±Р°Р·Рµ
 		baskets = $("table.inside tr.basket2", section.td);
 		section.baskets = baskets.size();
-		// Перераспределить полки в секции с учетом нового числа корзин
+		// РџРµСЂРµСЂР°СЃРїСЂРµРґРµР»РёС‚СЊ РїРѕР»РєРё РІ СЃРµРєС†РёРё СЃ СѓС‡РµС‚РѕРј РЅРѕРІРѕРіРѕ С‡РёСЃР»Р° РєРѕСЂР·РёРЅ
 		cupboardSetupPansInSection(section);
 		cupboardCalculate();
 	} else {
 		$(this).val(0);
-		alert("Введите положительное числовое значение!");
+		alert("Р’РІРµРґРёС‚Рµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ С‡РёСЃР»РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ!");
 	}
 }
 
-// Получить номер id секции в базе из панельки управления секцией
+// РџРѕР»СѓС‡РёС‚СЊ РЅРѕРјРµСЂ id СЃРµРєС†РёРё РІ Р±Р°Р·Рµ РёР· РїР°РЅРµР»СЊРєРё СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёРµР№
 
 function cupboardGetSectionIdFromSectionControlPane(context) {
 	return $(context).parents("td.control").find("span.number").attr("id");
@@ -520,29 +520,29 @@ function cupboardGetSectionIdFromSectionControlPane(context) {
 
 // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// УПРАВЛЕНИЕ ДВЕРЯМИ
+// РЈРџР РђР’Р›Р•РќРР• Р”Р’Р•Р РЇРњР
 
-// Добавление панельки добавления новой двери
+// Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РЅРµР»СЊРєРё РґРѕР±Р°РІР»РµРЅРёСЏ РЅРѕРІРѕР№ РґРІРµСЂРё
 
 function cupboardInsertDoorControlPaneInsert() {
 	var group = $("div.cupboard-clones table.group-control-doors").clone();
 	$("div.cupboard-control-doors").append(group);
-	$("td", group).append("<div><button>Добавить дверь</button></div>")
+	$("td", group).append("<div><button>Р”РѕР±Р°РІРёС‚СЊ РґРІРµСЂСЊ</button></div>")
 		.find("button").click(cupboardInsertDoor);
 }
 
-// Добавление панельки управления дверью
+// Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РЅРµР»СЊРєРё СѓРїСЂР°РІР»РµРЅРёСЏ РґРІРµСЂСЊСЋ
 
 function cupboardInsertDoor() {
 	var controlpane = $("<td class='control update'></td>");
 	controlpane.insertBefore("div.cupboard-control-doors td.insert");
 	var update = $("div.cupboard-clones div.door-pane-update").clone();
 	controlpane.append(update);
-	// Перенумеровать
+	// РџРµСЂРµРЅСѓРјРµСЂРѕРІР°С‚СЊ
 	$("div.cupboard-control-doors td.control").each(function(i){
 		$("span.number", this).text(i + 1);
 	});
-	// Обработчики
+	// РћР±СЂР°Р±РѕС‚С‡РёРєРё
 	$("button.delete", update).click(cupboardDeleteDoor);
 	$("input.mdf", update).click(cupboardCheckboxMdfOnChange);
 	$("select.filler", update).change(cupboardSelectFillerOnChange);
@@ -564,12 +564,12 @@ function cupboardCheckboxMdfOnChange() {
 	cupboardCalculate();
 }
 
-// Удаление панельки управления дверью
+// РЈРґР°Р»РµРЅРёРµ РїР°РЅРµР»СЊРєРё СѓРїСЂР°РІР»РµРЅРёСЏ РґРІРµСЂСЊСЋ
 
 function cupboardDeleteDoor() {
-	// Удалить панель
+	// РЈРґР°Р»РёС‚СЊ РїР°РЅРµР»СЊ
 	$(this).parents("td.control").remove();
-	// Перенумеровать
+	// РџРµСЂРµРЅСѓРјРµСЂРѕРІР°С‚СЊ
 	$("div.cupboard-control-doors td.control").each(function(i){
 		$("span.number", this).text(i + 1);
 	});
@@ -578,7 +578,7 @@ function cupboardDeleteDoor() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// Управление полями ввода
+// РЈРїСЂР°РІР»РµРЅРёРµ РїРѕР»СЏРјРё РІРІРѕРґР°
 
 function cupboardSetSpines() {
 	var fields = $("div.pane-params div.field").not(":has(select)")
@@ -586,8 +586,8 @@ function cupboardSetSpines() {
 			$(this).append("<img class='spin' src='cupboard/images/spin.gif' border='0' usemap='#spin" + i + "'>");
 			$(this).append("\
 				<map name='spin" + i + "'>\
-					<area class='up' alt='Увеличить значение' coords='0,0,11,11' href='javascript:void(0)'>\
-					<area class='down' alt='Уменьшить значение' coords='0,11,11,22' href='javascript:void(0)'>\
+					<area class='up' alt='РЈРІРµР»РёС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ' coords='0,0,11,11' href='javascript:void(0)'>\
+					<area class='down' alt='РЈРјРµРЅСЊС€РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ' coords='0,11,11,22' href='javascript:void(0)'>\
 				</map>\
 			");
 		});
@@ -613,7 +613,7 @@ function cupboardSpinAreaDownOnClick() {
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// ПОДСЧИТАТЬ
+// РџРћР”РЎР§РРўРђРўР¬
 
 function cupboardCalculate() {
 	var price = 0;
@@ -627,96 +627,96 @@ function cupboardCalculate() {
 	var walltop = cupboard.params.walltop.attr("checked");
 	var walllower = cupboard.params.walllower.attr("checked");
 	var wallback = cupboard.params.wallback.attr("checked");
-	// СТЕНКИ
+	// РЎРўР•РќРљР
 	if (wallleft) price += sizeh * sizeg * material;
 	if (wallright) price += sizeh * sizeg * material;
 	if (walltop) price += sizew * sizeg * material;
 	if (walllower) price += sizew * sizeg * material;
-	// ЗАДНЯЯ СТЕНКА ОРГАЛИТ
+	// Р—РђР”РќРЇРЇ РЎРўР•РќРљРђ РћР Р“РђР›РРў
 	if (wallback) price += sizew * sizeh * 320;
-	// ФАЛЬШПАНЕЛИ
+	// Р¤РђР›Р¬РЁРџРђРќР•Р›Р
 	if (!wallleft) price += 350;
 	if (!wallright) price += 350;
 	if (!walltop) price += 350;
 	if (!walllower) price += 350;
-	// ДВЕРИ
+	// Р”Р’Р•Р Р
 	var doorborder = cupboard.params.doorborder.val();
 	var doors = $("div.cupboard-control-doors div.door-pane-update");
 	var doorwidth = sizew / doors.size();
 	doors = doors.get();
 	for (var i = 0; i < doors.length; i++) {
 		var door = doors[i];
-		// Взять номер наполнения
+		// Р’Р·СЏС‚СЊ РЅРѕРјРµСЂ РЅР°РїРѕР»РЅРµРЅРёСЏ
 		var filler = $(door).find("select.filler").val();
-		// Определить мдф-ность двери
+		// РћРїСЂРµРґРµР»РёС‚СЊ РјРґС„-РЅРѕСЃС‚СЊ РґРІРµСЂРё
 		if ($(door).find("input.mdf").attr("checked")) {
-			// МДФ дверь
-			// Получить цену МДФ за квадратный метр
+			// РњР”Р¤ РґРІРµСЂСЊ
+			// РџРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ РњР”Р¤ Р·Р° РєРІР°РґСЂР°С‚РЅС‹Р№ РјРµС‚СЂ
 			filler = cupboard.prices.mdffillers[filler];
-			// Получить цену двери
+			// РџРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ РґРІРµСЂРё
 			price += sizeh * doorwidth * filler;
 		} else {
-			// Не МДФ
-			// Получить округленную цену
+			// РќРµ РњР”Р¤
+			// РџРѕР»СѓС‡РёС‚СЊ РѕРєСЂСѓРіР»РµРЅРЅСѓСЋ С†РµРЅСѓ
 			candoorwidth = getCanonicalDoorWidth(doorwidth * 1000);
-			// Получить цену двери
+			// РџРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ РґРІРµСЂРё
 			price += cupboard.prices.doors[candoorwidth + "/" + filler + "/" + doorborder];
 		}
 	}
-	// СЕКЦИИ: ПОЛКИ, КОРЗИНЫ/ЯЩИКИ, ВЕШАЛКИ, ПЕРЕГОРОДКИ
+	// РЎР•РљР¦РР: РџРћР›РљР, РљРћР Р—РРќР«/РЇР©РРљР, Р’Р•РЁРђР›РљР, РџР•Р Р•Р“РћР РћР”РљР
 	var section = cupboard.first;
 	while (section) {
-		// Полки
+		// РџРѕР»РєРё
 		price += sizeg * (section.width / 100) * material * section.pans;
-		// Корзина (1) или ящик (2)
+		// РљРѕСЂР·РёРЅР° (1) РёР»Рё СЏС‰РёРє (2)
 		if (section.baskets) price += section.baskets * ((section.basket == 1) ? 950 : 900);
-		// Вешалки: торцевая (1) или штанга (2)
+		// Р’РµС€Р°Р»РєРё: С‚РѕСЂС†РµРІР°СЏ (1) РёР»Рё С€С‚Р°РЅРіР° (2)
 		if (section.hanger) price += (section.hanger == 1) ? (230 + 80) : 250;
-		// Перегородка
+		// РџРµСЂРµРіРѕСЂРѕРґРєР°
 		if (section.next) price += sizeh * sizeg * material;
-		// Следующая секция
+		// РЎР»РµРґСѓСЋС‰Р°СЏ СЃРµРєС†РёСЏ
 		section = section.next;
 	}
-	// НАКРУТКА
+	// РќРђРљР РЈРўРљРђ
 	price += price * 0.03;
-	// Окончательная цена - выводим
+	// РћРєРѕРЅС‡Р°С‚РµР»СЊРЅР°СЏ С†РµРЅР° - РІС‹РІРѕРґРёРј
 	cupboard.price.text(Math.round(price));
 }
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// ПЕЧАТЬ
+// РџР•Р§РђРўР¬
 
 function cupboardPrint() {
-	// Обязательные действия
+	// РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ
 	var print = $("div.cupboard-print");
 	$("body > div.container").hide();
 	$("body > div.sidebar").hide();
 	$("body > div.footer").hide();
-	// Перетащить шкаф
+	// РџРµСЂРµС‚Р°С‰РёС‚СЊ С€РєР°С„
 	$("div.cupboard").appendTo($("div.body div.image", print));
-	// Инициализация один раз
+	// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РѕРґРёРЅ СЂР°Р·
 	if (!cupboard.print) {
 		cupboard.print = true;
 		cupboardPrintInit(print);
 	}
-	// Подготовка таблиц
+	// РџРѕРґРіРѕС‚РѕРІРєР° С‚Р°Р±Р»РёС†
 	cupboardPrintPrepareTables(print);
-	// Показать страницу печати
+	// РџРѕРєР°Р·Р°С‚СЊ СЃС‚СЂР°РЅРёС†Сѓ РїРµС‡Р°С‚Рё
 	print.show();
 }
 
 function cupboardPrintInit(print) {
-	// Кнопки
+	// РљРЅРѕРїРєРё
 	var buttons = {
 		toprint: $("button.toprint", print),
 		tocalc: $("button.tocalc", print)
 	}
-	// Обработка кнопки печать
+	// РћР±СЂР°Р±РѕС‚РєР° РєРЅРѕРїРєРё РїРµС‡Р°С‚СЊ
 	buttons.toprint.click(function(){
 		window.print();
 	});
-	// Обработка возврата
+	// РћР±СЂР°Р±РѕС‚РєР° РІРѕР·РІСЂР°С‚Р°
 	buttons.tocalc.click(function(){
 		$("div.body div.tables *").remove();
 		$("div.cupboard-print").hide();
@@ -725,14 +725,14 @@ function cupboardPrintInit(print) {
 		$("body > div.footer").show();
 		$("div.cupboard").appendTo($("div.cupboard-brace"));
 	});
-	// Инструкции для разных броузеров
+	// РРЅСЃС‚СЂСѓРєС†РёРё РґР»СЏ СЂР°Р·РЅС‹С… Р±СЂРѕСѓР·РµСЂРѕРІ
 	if ($.browser.msie) { $("span.browser", print).hide(); $("span.msie", print).show(); }
 	if ($.browser.opera) { $("span.browser", print).hide(); $("span.opera", print).show(); }
 }
 
 function cupboardPrintPrepareTables(print) {
 	var tables = $("div.body div.tables", print);
-	// Основные параметры
+	// РћСЃРЅРѕРІРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 	var common = $("<p class='common'></p>").appendTo(tables);
 	var wallleft = cupboard.params.wallleft.attr("checked");
 	var wallright = cupboard.params.wallright.attr("checked");
@@ -746,78 +746,78 @@ function cupboardPrintPrepareTables(print) {
 	doorborder = doorborder.find("option[value='" + doorborder.val() + "']").text();
 	var material = cupboard.params.material;
 	material = material.find("option[value='" + material.val() + "']").text();
-	common.append("<b>Размеры шкафа:</b> " + sizew + " x " + sizeh + " x " + sizeg + " см.<br>");
-	common.append("<b>Материал:</b> " + material + "<br>");
-	common.append("<b>Рамка дверей:</b> " + doorborder + "<br>");
-	var walls = (wallleft) ? "Левая" : "";
-	walls += (wallright) ? " Правая" : " ";
-	walls += (walltop) ? " Верхняя" : " ";
-	walls += (walllower) ? " Нижняя" : " ";
-	walls += (wallback) ? " Задняя" : " ";
-	common.append("<b>Стенки:</b> " + walls + "<br>");
-	// Секции
-	$("<h2>Секции:</h2>").appendTo(tables);
+	common.append("<b>Р Р°Р·РјРµСЂС‹ С€РєР°С„Р°:</b> " + sizew + " x " + sizeh + " x " + sizeg + " СЃРј.<br>");
+	common.append("<b>РњР°С‚РµСЂРёР°Р»:</b> " + material + "<br>");
+	common.append("<b>Р Р°РјРєР° РґРІРµСЂРµР№:</b> " + doorborder + "<br>");
+	var walls = (wallleft) ? "Р›РµРІР°СЏ" : "";
+	walls += (wallright) ? " РџСЂР°РІР°СЏ" : " ";
+	walls += (walltop) ? " Р’РµСЂС…РЅСЏСЏ" : " ";
+	walls += (walllower) ? " РќРёР¶РЅСЏСЏ" : " ";
+	walls += (wallback) ? " Р—Р°РґРЅСЏСЏ" : " ";
+	common.append("<b>РЎС‚РµРЅРєРё:</b> " + walls + "<br>");
+	// РЎРµРєС†РёРё
+	$("<h2>РЎРµРєС†РёРё:</h2>").appendTo(tables);
 	var tablesections = $("<table class='sections data layout'><tbody></tbody></table>").appendTo(tables).find("tbody");
 	var section = cupboard.first;
 	var j = 1;
 	while (section) {
-		// Полки
-		var pans = "Полки: " + section.pans + " шт.";
+		// РџРѕР»РєРё
+		var pans = "РџРѕР»РєРё: " + section.pans + " С€С‚.";
 		if (!section.pans) pans = "&nbsp;";
-		// Корзина или ящик
+		// РљРѕСЂР·РёРЅР° РёР»Рё СЏС‰РёРє
 		var basket = $("div.cupboard-clones div.section-pane-update select.basket");
 		basket = basket.find("option[value='" + section.basket + "']").text();
-		basket = basket + ": " + section.baskets + " шт.";
+		basket = basket + ": " + section.baskets + " С€С‚.";
 		if (!section.basket) basket = "&nbsp;";
-		// Вешалки: торцевая (1) или штанга (2)
+		// Р’РµС€Р°Р»РєРё: С‚РѕСЂС†РµРІР°СЏ (1) РёР»Рё С€С‚Р°РЅРіР° (2)
 		var hanger = $("div.cupboard-clones div.section-pane-update select.hanger");
 		hanger = hanger.find("option[value='" + section.hanger + "']").text();
-		hanger = "Вешалка: " + hanger;
+		hanger = "Р’РµС€Р°Р»РєР°: " + hanger;
 		if (!section.hanger) hanger = "&nbsp;";
-		// Печать
+		// РџРµС‡Р°С‚СЊ
 		tablesections.append("\
 			<tr>\
-				<td>Секция № " + j++ + " " + "</td>\
-				<td>" + section.width + " см.</td>\
+				<td>РЎРµРєС†РёСЏ в„– " + j++ + " " + "</td>\
+				<td>" + section.width + " СЃРј.</td>\
 				<td>" + pans + "</td>\
 				<td>" + basket + "</td>\
 				<td>" + hanger + "</td>\
 			</tr>\
 		");
-		// Следующая секция
+		// РЎР»РµРґСѓСЋС‰Р°СЏ СЃРµРєС†РёСЏ
 		section = section.next;
 	}
-	// Двери
-	$("<h2>Двери:</h2>").appendTo(tables);
+	// Р”РІРµСЂРё
+	$("<h2>Р”РІРµСЂРё:</h2>").appendTo(tables);
 	var tabledoors = $("<table class='doors data layout'><tbody></tbody></table>").appendTo(tables).find("tbody");
 	var doors = $("div.cupboard-control-doors div.door-pane-update");
 	var doorwidth = sizew / doors.size();
 	doors = doors.get();
 	for (var i = 0; i < doors.length; i++) {
 		var door = doors[i];
-		// Наполнение двери
+		// РќР°РїРѕР»РЅРµРЅРёРµ РґРІРµСЂРё
 		var filler = $(door).find("select.filler");
 		filler = filler.find("option[value='" + filler.val() + "']").text();
-		// МДФность
-		var mdf = $(door).find("input.mdf").attr("checked") ? "МДФ" : "&nbsp;";
-		// Печать
+		// РњР”Р¤РЅРѕСЃС‚СЊ
+		var mdf = $(door).find("input.mdf").attr("checked") ? "РњР”Р¤" : "&nbsp;";
+		// РџРµС‡Р°С‚СЊ
 		tabledoors.append("\
 			<tr>\
-				<td>Дверь № " + ( i + 1 ) + " " + "</td>\
+				<td>Р”РІРµСЂСЊ в„– " + ( i + 1 ) + " " + "</td>\
 				<td>" + mdf + "</td>\
-				<td>" + doorwidth + " см.</td>\
-				<td>Наполнение: " + filler + "</td>\
+				<td>" + doorwidth + " СЃРј.</td>\
+				<td>РќР°РїРѕР»РЅРµРЅРёРµ: " + filler + "</td>\
 			</tr>\
 		");
 	}
-	// Цена
+	// Р¦РµРЅР°
 	var price = $("<p class='price'></p>").appendTo(tables);
-	price.text("Цена: " + cupboard.price.text() + " руб.");
+	price.text("Р¦РµРЅР°: " + cupboard.price.text() + " СЂСѓР±.");
 }
 
 // // // // // // // // // // // // // // // // // // // // // // // // //
 
-// ПАРАМЕТРЫ
+// РџРђР РђРњР•РўР Р«
 
 function getCanonicalDoorWidth(width) {
 	if (width <= 450) return 450;
@@ -828,7 +828,7 @@ function getCanonicalDoorWidth(width) {
 	return 1000;
 }
 
-// Цена материала за квадратный метр
+// Р¦РµРЅР° РјР°С‚РµСЂРёР°Р»Р° Р·Р° РєРІР°РґСЂР°С‚РЅС‹Р№ РјРµС‚СЂ
 function getPriceMaterials() {
 	var result = new Array();
 	result[10] = 1050;
@@ -838,13 +838,13 @@ function getPriceMaterials() {
 
 function getTableMdfFillers() {
 	var result = new Array();
-	result.push({ id: 10, label: "ЛДСП" });
-	result.push({ id: 20, label: "Стекло" });
-	result.push({ id: 30, label: "Зеркало" });
-	result.push({ id: 40, label: "Стекло-Тонированное" });
-	result.push({ id: 50, label: "Зеркало-Тонированное" });
-	result.push({ id: 60, label: "Стекло-Матовое" });
-	result.push({ id: 70, label: "РАТТАН" });
+	result.push({ id: 10, label: "Р›Р”РЎРџ" });
+	result.push({ id: 20, label: "РЎС‚РµРєР»Рѕ" });
+	result.push({ id: 30, label: "Р—РµСЂРєР°Р»Рѕ" });
+	result.push({ id: 40, label: "РЎС‚РµРєР»Рѕ-РўРѕРЅРёСЂРѕРІР°РЅРЅРѕРµ" });
+	result.push({ id: 50, label: "Р—РµСЂРєР°Р»Рѕ-РўРѕРЅРёСЂРѕРІР°РЅРЅРѕРµ" });
+	result.push({ id: 60, label: "РЎС‚РµРєР»Рѕ-РњР°С‚РѕРІРѕРµ" });
+	result.push({ id: 70, label: "Р РђРўРўРђРќ" });
 	return result;
 }
 
@@ -860,30 +860,30 @@ function getPriceMdfFillers() {
 	return result;
 }
 
-// Наполнение
+// РќР°РїРѕР»РЅРµРЅРёРµ
 function getTableFillers() {
 	var result = new Array();
-	result.push({ id: 10, label: "ЛДСП склад" });
-	result.push({ id: 20, label: "ЛДСП заказ" });
-	result.push({ id: 30, label: "Зеркало" });
-	result.push({ id: 40, label: "Зеркало бр, гр, зел." });
-	result.push({ id: 50, label: "Стекло" });
-	result.push({ id: 60, label: "Стекло бр" });
-	result.push({ id: 70, label: "Стекло мат" });
+	result.push({ id: 10, label: "Р›Р”РЎРџ СЃРєР»Р°Рґ" });
+	result.push({ id: 20, label: "Р›Р”РЎРџ Р·Р°РєР°Р·" });
+	result.push({ id: 30, label: "Р—РµСЂРєР°Р»Рѕ" });
+	result.push({ id: 40, label: "Р—РµСЂРєР°Р»Рѕ Р±СЂ, РіСЂ, Р·РµР»." });
+	result.push({ id: 50, label: "РЎС‚РµРєР»Рѕ" });
+	result.push({ id: 60, label: "РЎС‚РµРєР»Рѕ Р±СЂ" });
+	result.push({ id: 70, label: "РЎС‚РµРєР»Рѕ РјР°С‚" });
 	return result;
 }
 
-// Рамка
+// Р Р°РјРєР°
 function getTableDoorBorders() {
 	var result = new Array();
-	result.push({ id: 10, label: "Сталь Коммандор (однотонный)" });
-	result.push({ id: 20, label: "Сталь Коммандор (под дерево)" });
-	result.push({ id: 30, label: "Алюминий Раумплюс (однотонный)" });
-	result.push({ id: 40, label: "Алюминий Раумплюс (под дерево)" });
+	result.push({ id: 10, label: "РЎС‚Р°Р»СЊ РљРѕРјРјР°РЅРґРѕСЂ (РѕРґРЅРѕС‚РѕРЅРЅС‹Р№)" });
+	result.push({ id: 20, label: "РЎС‚Р°Р»СЊ РљРѕРјРјР°РЅРґРѕСЂ (РїРѕРґ РґРµСЂРµРІРѕ)" });
+	result.push({ id: 30, label: "РђР»СЋРјРёРЅРёР№ Р Р°СѓРјРїР»СЋСЃ (РѕРґРЅРѕС‚РѕРЅРЅС‹Р№)" });
+	result.push({ id: 40, label: "РђР»СЋРјРёРЅРёР№ Р Р°СѓРјРїР»СЋСЃ (РїРѕРґ РґРµСЂРµРІРѕ)" });
 	return result;
 }
 
-// Ширина/наполнение/рамка
+// РЁРёСЂРёРЅР°/РЅР°РїРѕР»РЅРµРЅРёРµ/СЂР°РјРєР°
 function getPriceDoors() {
 	var result = new Array();
 

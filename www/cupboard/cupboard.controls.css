@@ -1,5 +1,5 @@
 
-/* Панели управления секциями */
+/* РџР°РЅРµР»Рё СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёСЏРјРё */
 
 div.section-pane-update {
 	border: 2px solid #02EC18;
@@ -66,7 +66,7 @@ div.cupboard-control-sections div.section-pane-update td.body td.col2 div.basket
 	width: 50%;
 }
 
-/* Панели управления дверям */
+/* РџР°РЅРµР»Рё СѓРїСЂР°РІР»РµРЅРёСЏ РґРІРµСЂСЏРј */
 
 div.cupboard-control-doors {
 	margin: 10px 0px 0px 0px;
@@ -131,7 +131,7 @@ div.cupboard-control-doors div.door-pane-update td.body td.col2 div.baskets tabl
 	width: 50%;
 }
 
-/* Параметры */
+/* РџР°СЂР°РјРµС‚СЂС‹ */
 
 div.pane-params {
 	margin: 0px 0px 10px 0px;

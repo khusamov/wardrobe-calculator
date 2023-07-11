@@ -1,21 +1,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- Дизайн и программинг: Сухроб Хусамов, khusamov@yandex.ru -->
-<!-- В разработке принимал участие: Алексей Жаринов, alezh@inbox.ru -->
-<!-- Рекламное агентство «Гав!», http://gav1.ru/ -->
-<html>
+<!-- Р”РёР·Р°Р№РЅ Рё РїСЂРѕРіСЂР°РјРјРёРЅРі: РЎСѓС…СЂРѕР± РҐСѓСЃР°РјРѕРІ, khusamov@yandex.ru -->
+<!-- Р’ СЂР°Р·СЂР°Р±РѕС‚РєРµ РїСЂРёРЅРёРјР°Р» СѓС‡Р°СЃС‚РёРµ: РђР»РµРєСЃРµР№ Р–Р°СЂРёРЅРѕРІ, alezh@inbox.ru -->
+<!-- Р РµРєР»Р°РјРЅРѕРµ Р°РіРµРЅС‚СЃС‚РІРѕ В«Р“Р°РІ!В», http://gav1.ru/ -->
+<html lang="ru">
 	<head>
-		<title>Калькулятор расчета шкафа-купе - Шкафолог</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-		<script src="cupboard/js/jquery-1.3.2.min.js"></script>
-		<script src="cupboard/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<title>РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЂР°СЃС‡РµС‚Р° С€РєР°С„Р°-РєСѓРїРµ - РЁРєР°С„РѕР»РѕРі</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link href="cupboard/cupboard.css" rel="stylesheet" type="text/css"/>
-		<script src="cupboard/js/cupboard.js"></script>
+		<script src="cupboard/js/jquery-1.3.2.min.js" type="application/javascript"></script>
+		<script src="cupboard/js/jquery-ui-1.7.2.custom.min.js" type="application/javascript"></script>
+		<script src="cupboard/js/cupboard.js" type="application/javascript"></script>
 	</head>
 <body>
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-
 
 <div class="container">
 	<div class="content">
@@ -31,46 +29,46 @@
 			<td style="padding: 10px;">
 				<div class="pane-params">
 					<table class="layout">
-						<tr><td class="header">Размеры</td></tr>
+						<tr><td class="header">Р Р°Р·РјРµСЂС‹</td></tr>
 						<tr><td class="body">
 							<table class="layout" width="100%">
 								<tr>
 									<td width="50%" style="padding-right: 5px;">
 										<div class="pans">
-											<div class="label">Высота, см.:</div>
+											<div class="label">Р’С‹СЃРѕС‚Р°, СЃРј.:</div>
 											<div class="field"><input type="text" class="w100 sizeh step10" name="sizeh" value="0"></div>
 										</div>
 									</td>
 									<td width="50%" style="padding-right: 5px;">
 										<div class="pans">
-											<div class="label">Глубина, см.:</div>
+											<div class="label">Р“Р»СѓР±РёРЅР°, СЃРј.:</div>
 											<div class="field"><input type="text" class="w100 sizeg step10" name="sizeg" value="0"></div>
 										</div>
 									</td>
 								</tr>
 							</table>
-							<div style="font-size: 90%; color: gray;">Внимание, длина задается шириной секций.</div>
+							<div style="font-size: 90%; color: gray;">Р’РЅРёРјР°РЅРёРµ, РґР»РёРЅР° Р·Р°РґР°РµС‚СЃСЏ С€РёСЂРёРЅРѕР№ СЃРµРєС†РёР№.</div>
 						</td></tr>
 					</table>
 				</div>		
 				<div class="pane-params">
 					<table class="layout">
-						<tr><td class="header">Стенки</td></tr>
+						<tr><td class="header">РЎС‚РµРЅРєРё</td></tr>
 						<tr><td class="body">
 							<table class="layout" width="100%">
 								<tr>
 									<td width="33%">&nbsp;</td>
-									<td width="34%"><label><input checked="checked" type="checkbox" class="walltop" name="walltop" value=""> Верхняя</label></td>
+									<td width="34%"><label><input checked="checked" type="checkbox" class="walltop" name="walltop" value=""> Р’РµСЂС…РЅСЏСЏ</label></td>
 									<td width="33%">&nbsp;</td>
 								</tr>
 								<tr>
-									<td width="33%"><label><input checked="checked" type="checkbox" class="wallleft" name="wallleft" value=""> Левая</label></td>
-									<td width="34%"><label><input checked="checked" type="checkbox" class="wallback" name="wallback" value=""> Задняя</label></td>
-									<td width="33%"><label><input checked="checked" type="checkbox" class="wallright" name="wallright" value=""> Правая</label></td>
+									<td width="33%"><label><input checked="checked" type="checkbox" class="wallleft" name="wallleft" value=""> Р›РµРІР°СЏ</label></td>
+									<td width="34%"><label><input checked="checked" type="checkbox" class="wallback" name="wallback" value=""> Р—Р°РґРЅСЏСЏ</label></td>
+									<td width="33%"><label><input checked="checked" type="checkbox" class="wallright" name="wallright" value=""> РџСЂР°РІР°СЏ</label></td>
 								</tr>
 								<tr>
 									<td width="33%">&nbsp;</td>
-									<td width="34%"><label><input checked="checked" type="checkbox" class="walllower" name="walllower" value=""> Нижняя</label></td>
+									<td width="34%"><label><input checked="checked" type="checkbox" class="walllower" name="walllower" value=""> РќРёР¶РЅСЏСЏ</label></td>
 									<td width="33%">&nbsp;</td>
 								</tr>
 							</table>
@@ -80,17 +78,17 @@
 				<div class="red">
 					<div class="pane-params">
 						<table class="layout">
-							<tr><td class="header">Стоимость шкафа-купе</td></tr>
+							<tr><td class="header">РЎС‚РѕРёРјРѕСЃС‚СЊ С€РєР°С„Р°-РєСѓРїРµ</td></tr>
 							<tr><td class="body">
 								<table class="body layout" width="100%">
 									<tr>
-										<td class="price"><span class="price">0</span> руб.</td>
+										<td class="price"><span class="price">0</span> СЂСѓР±.</td>
 									</tr>
 									<tr>
 										<td>
-											<button class="print">Печать</button>&nbsp;
-											<button class="cupboard-about-form"><nobr><b>Предложение!!!</b></nobr></button>
-											<!--<button class="calculate">Подсчитать</button>-->
+											<button class="print">РџРµС‡Р°С‚СЊ</button>&nbsp;
+											<button class="cupboard-about-form"><nobr><b>РџСЂРµРґР»РѕР¶РµРЅРёРµ!!!</b></nobr></button>
+											<!--<button class="calculate">РџРѕРґСЃС‡РёС‚Р°С‚СЊ</button>-->
 										</td>
 									</tr>
 								</table>
@@ -99,7 +97,7 @@
 					</div>
 				</div>
 				<!--<div style="text-align: right;">
-					<button class="cupboard-about-form"><nobr>О программе</nobr></button>
+					<button class="cupboard-about-form"><nobr>Рћ РїСЂРѕРіСЂР°РјРјРµ</nobr></button>
 				</div>-->
 			</td>
 		</tr>
@@ -109,7 +107,7 @@
 <div class="footer">
 	<marquee loop="" scrollamount="2" scrolldelay="25" truespeed="truespeed">
 		<span id="marquee">
-			Это демонстранционная версия калькулятора. Читайте коммерческое предложение для его приобретения.
+			Р­С‚Рѕ РґРµРјРѕРЅСЃС‚СЂР°РЅС†РёРѕРЅРЅР°СЏ РІРµСЂСЃРёСЏ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР°. Р§РёС‚Р°Р№С‚Рµ РєРѕРјРјРµСЂС‡РµСЃРєРѕРµ РїСЂРµРґР»РѕР¶РµРЅРёРµ РґР»СЏ РµРіРѕ РїСЂРёРѕР±СЂРµС‚РµРЅРёСЏ.
 		</span>
 	</marquee>
 	<div class="pane-params pane-params-material">
@@ -117,15 +115,15 @@
 			<tr>
 				<td class="body">
 					<nobr>
-						Материал отделки панелей шкафа и полок:
+						РњР°С‚РµСЂРёР°Р» РѕС‚РґРµР»РєРё РїР°РЅРµР»РµР№ С€РєР°С„Р° Рё РїРѕР»РѕРє:
 						<select class="material" name="material">
-							<option value="10" selected>1-я категория</option>
-							<option value="20">2-я категория</option>
+							<option value="10" selected>1-СЏ РєР°С‚РµРіРѕСЂРёСЏ</option>
+							<option value="20">2-СЏ РєР°С‚РµРіРѕСЂРёСЏ</option>
 						</select>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					</nobr>
 					<nobr>
-						Рамка дверей:
+						Р Р°РјРєР° РґРІРµСЂРµР№:
 						<select class="doorborder" name="doorborder"></select>
 					</nobr>
 				</td>
@@ -141,9 +139,9 @@
 
 <div class="cupboard-print">
 	<div class="header">
-		<h1>Расчет Вашего шкафа от Шкафолога!</h1>
-		<p>Фабрика мебели «Мебель», http://site.ru/, телефон: +7 (000) 123-45-67.<br>
-		Адрес вашей мебельной фабрики.</p>
+		<h1>Р Р°СЃС‡РµС‚ Р’Р°С€РµРіРѕ С€РєР°С„Р°!</h1>
+		<p>Р¤Р°Р±СЂРёРєР° РјРµР±РµР»Рё В«РњРµР±РµР»СЊВ», http://site.ru/, С‚РµР»РµС„РѕРЅ: +7 (000) 123-45-67.<br>
+		РђРґСЂРµСЃ РІР°С€РµР№ РјРµР±РµР»СЊРЅРѕР№ С„Р°Р±СЂРёРєРё.</p>
 	</div>
 	<div class="body">
 		<div class="image"></div>
@@ -151,20 +149,20 @@
 	</div>
 	<div class="buttons">
 		<p>
-			<button class="toprint">Начать печать</button>
+			<button class="toprint">РќР°С‡Р°С‚СЊ РїРµС‡Р°С‚СЊ</button>
 			&nbsp;
-			<button class="tocalc">Вернуться</button>
+			<button class="tocalc">Р’РµСЂРЅСѓС‚СЊСЃСЏ</button>
 		</p>
 		<p>
-			<b>Внимание!</b> Не забудьте в параметрах броузера разрешить печать фоновых картинок. 
-			<br><b>Кратко как это сделать:</b>
-			<span class="browser firefox">В главном меню выберите «Файл / Параметры страницы» и 
-			в появившемся окне поставьте галочку напротив опции «Свойства / Печать фона».</span>
-			<span class="browser msie">Справа наверху найдите меню «Сервис» и в нем команду «Свойства обозревателя».
-			В появившемся окне найдите вкладку «Дополнительно». Далее найдите пункт «Печать» и в нем поставьте
-			галочку напротив опции «Печатать цвет и рисунки фона».</span>
-			<span class="browser opera">В главном меню выберите «Файл / Параметры печати» и 
-			в появившемся окне поставьте галочку напротив опции «Печатать фон страницы».</span>
+			<b>Р’РЅРёРјР°РЅРёРµ!</b> РќРµ Р·Р°Р±СѓРґСЊС‚Рµ РІ РїР°СЂР°РјРµС‚СЂР°С… Р±СЂРѕСѓР·РµСЂР° СЂР°Р·СЂРµС€РёС‚СЊ РїРµС‡Р°С‚СЊ С„РѕРЅРѕРІС‹С… РєР°СЂС‚РёРЅРѕРє. 
+			<br><b>РљСЂР°С‚РєРѕ РєР°Рє СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ:</b>
+			<span class="browser firefox">Р’ РіР»Р°РІРЅРѕРј РјРµРЅСЋ РІС‹Р±РµСЂРёС‚Рµ В«Р¤Р°Р№Р» / РџР°СЂР°РјРµС‚СЂС‹ СЃС‚СЂР°РЅРёС†С‹В» Рё 
+			РІ РїРѕСЏРІРёРІС€РµРјСЃСЏ РѕРєРЅРµ РїРѕСЃС‚Р°РІСЊС‚Рµ РіР°Р»РѕС‡РєСѓ РЅР°РїСЂРѕС‚РёРІ РѕРїС†РёРё В«РЎРІРѕР№СЃС‚РІР° / РџРµС‡Р°С‚СЊ С„РѕРЅР°В».</span>
+			<span class="browser msie">РЎРїСЂР°РІР° РЅР°РІРµСЂС…Сѓ РЅР°Р№РґРёС‚Рµ РјРµРЅСЋ В«РЎРµСЂРІРёСЃВ» Рё РІ РЅРµРј РєРѕРјР°РЅРґСѓ В«РЎРІРѕР№СЃС‚РІР° РѕР±РѕР·СЂРµРІР°С‚РµР»СЏВ».
+			Р’ РїРѕСЏРІРёРІС€РµРјСЃСЏ РѕРєРЅРµ РЅР°Р№РґРёС‚Рµ РІРєР»Р°РґРєСѓ В«Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕВ». Р”Р°Р»РµРµ РЅР°Р№РґРёС‚Рµ РїСѓРЅРєС‚ В«РџРµС‡Р°С‚СЊВ» Рё РІ РЅРµРј РїРѕСЃС‚Р°РІСЊС‚Рµ
+			РіР°Р»РѕС‡РєСѓ РЅР°РїСЂРѕС‚РёРІ РѕРїС†РёРё В«РџРµС‡Р°С‚Р°С‚СЊ С†РІРµС‚ Рё СЂРёСЃСѓРЅРєРё С„РѕРЅР°В».</span>
+			<span class="browser opera">Р’ РіР»Р°РІРЅРѕРј РјРµРЅСЋ РІС‹Р±РµСЂРёС‚Рµ В«Р¤Р°Р№Р» / РџР°СЂР°РјРµС‚СЂС‹ РїРµС‡Р°С‚РёВ» Рё 
+			РІ РїРѕСЏРІРёРІС€РµРјСЃСЏ РѕРєРЅРµ РїРѕСЃС‚Р°РІСЊС‚Рµ РіР°Р»РѕС‡РєСѓ РЅР°РїСЂРѕС‚РёРІ РѕРїС†РёРё В«РџРµС‡Р°С‚Р°С‚СЊ С„РѕРЅ СЃС‚СЂР°РЅРёС†С‹В».</span>
 		</p>
 	</div>
 </div>
@@ -181,14 +179,14 @@
 			<table class="form layout">
 				<tr>
 					<td class="header">
-						<h2>Коммерческое предложение</h2>
+						<h2>РљРѕРјРјРµСЂС‡РµСЃРєРѕРµ РїСЂРµРґР»РѕР¶РµРЅРёРµ</h2>
 					</td>
 				</tr>
 				<tr>
 					<td class="body">
 						<iframe src="com.html" frameborder="0" width="100%" height="400px"></iframe>
 						<p style="text-align: right;">
-							<button class="close">Закрыть</button>
+							<button class="close">Р—Р°РєСЂС‹С‚СЊ</button>
 						</p>
 					</td>
 				</tr>
@@ -201,7 +199,7 @@
 
 <div class="cupboard-clones">
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Оболочка шкафа -->
+	<!-- РћР±РѕР»РѕС‡РєР° С€РєР°С„Р° -->
 		<table class="box1 layout">
 			<tr>
 				<td class="box1e1">
@@ -226,7 +224,7 @@
 								</div>
 							</td>
 							<td class="boxinside">
-								<!-- Внутренняя часть шкафа -->
+								<!-- Р’РЅСѓС‚СЂРµРЅРЅСЏСЏ С‡Р°СЃС‚СЊ С€РєР°С„Р° -->
 							</td>
 							<td class="box1e23">
 								<div class="box1 box1e23b">
@@ -234,8 +232,8 @@
 										<div class="box1 box1e23c">
 											<div style="position: relative;">
 												<table class="sizeh layout" height="100%">
-													<tr><td><span class="sizeh"><span>0</span> см.</span></td></tr>
-													<tr><td height="10px"><span class="sizeg"><span>0</span> см.</span></td></tr>
+													<tr><td><span class="sizeh"><span>0</span> СЃРј.</span></td></tr>
+													<tr><td height="10px"><span class="sizeg"><span>0</span> СЃРј.</span></td></tr>
 												</table>
 											</div>
 										</div>
@@ -253,7 +251,7 @@
 							<div class="box1 box1e33">
 								<table class="layout" width="100%" height="100%">
 									<tr>
-										<td align="center"><span class="sizew"><span>250</span> см.</span></td>
+										<td align="center"><span class="sizew"><span>250</span> СЃРј.</span></td>
 										<td width="63px">&nbsp;</td>
 									</tr>
 								</table>
@@ -263,24 +261,24 @@
 				</td>
 			</tr>
 		</table>
-	<!-- / Оболочка шкафа -->
+	<!-- / РћР±РѕР»РѕС‡РєР° С€РєР°С„Р° -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Внутренняя часть шкафа -->
+	<!-- Р’РЅСѓС‚СЂРµРЅРЅСЏСЏ С‡Р°СЃС‚СЊ С€РєР°С„Р° -->
 		<div class="boxinside" style="width: 100%; height: 100%; position: relative;">
 			<table class="box layout">
 				<tr class="sections">
-					<!-- Секции -->
-					<!-- Замыкающая стенка -->
+					<!-- РЎРµРєС†РёРё -->
+					<!-- Р—Р°РјС‹РєР°СЋС‰Р°СЏ СЃС‚РµРЅРєР° -->
 				</tr>
 			</table>
-			<!-- Управлялки
+			<!-- РЈРїСЂР°РІР»СЏР»РєРё
 				<div class="control-section"></div>
 				<div class="control-section"></div> -->
-			<!-- / Управлялки -->
+			<!-- / РЈРїСЂР°РІР»СЏР»РєРё -->
 		</div>
-	<!-- / Внутренняя часть шкафа -->
+	<!-- / Р’РЅСѓС‚СЂРµРЅРЅСЏСЏ С‡Р°СЃС‚СЊ С€РєР°С„Р° -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Секция -->
+	<!-- РЎРµРєС†РёСЏ -->
 		<td class="pane1e2a">&nbsp;</td>
 		<td class="section">
 			<div class="box pane1e2">
@@ -288,16 +286,16 @@
 					<div class="box box0e12">
 						<div class="box pane1e1">
 							<div class="box pane1e3">
-								<!-- Внутри секции -->
+								<!-- Р’РЅСѓС‚СЂРё СЃРµРєС†РёРё -->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</td>
-	<!-- / Секция -->
+	<!-- / РЎРµРєС†РёСЏ -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Внутри секции -->
+	<!-- Р’РЅСѓС‚СЂРё СЃРµРєС†РёРё -->
 		<table class="inside layout">
 			<!--<tr class="basket1">-->
 			<tr>
@@ -318,9 +316,9 @@
 			<tr class="basket2"><td>&nbsp;</td></tr>
 			-->
 		</table>
-	<!-- / Внутри секции -->
+	<!-- / Р’РЅСѓС‚СЂРё СЃРµРєС†РёРё -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Замыкающая стенка -->
+	<!-- Р—Р°РјС‹РєР°СЋС‰Р°СЏ СЃС‚РµРЅРєР° -->
 		<td class="end">
 			<div class="box box0e23">
 				<div class="box box0e13">
@@ -330,25 +328,25 @@
 				</div>
 			</div>
 		</td>
-	<!-- / Замыкающая стенка -->
+	<!-- / Р—Р°РјС‹РєР°СЋС‰Р°СЏ СЃС‚РµРЅРєР° -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Группа управления секциями Вставка / Редактирование / Удаление -->
+	<!-- Р“СЂСѓРїРїР° СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёСЏРјРё Р’СЃС‚Р°РІРєР° / Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ / РЈРґР°Р»РµРЅРёРµ -->
 		<table class="group-control-sections layout">
 			<tr>
 				<td class="control insert" valign="top"></td>
 			</tr>
 		</table>
-	<!-- / Группа управления секциями Вставка / Редактирование / Удаление -->
+	<!-- / Р“СЂСѓРїРїР° СѓРїСЂР°РІР»РµРЅРёСЏ СЃРµРєС†РёСЏРјРё Р’СЃС‚Р°РІРєР° / Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ / РЈРґР°Р»РµРЅРёРµ -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Управление секцией -->
+	<!-- РЈРїСЂР°РІР»РµРЅРёРµ СЃРµРєС†РёРµР№ -->
 		<div class="section-pane-update">
 			<table class="layout">
 				<tr>
 					<td class="header">
 						<table class="header layout">
 							<tr>
-								<td>Секция № <span class="number">0</span> <span class="width">(<span></span> см.)</span></td>
-								<td align="right"><button class="delete" title="Удалить секцию">X</button></td>
+								<td>РЎРµРєС†РёСЏ в„– <span class="number">0</span> <span class="width">(<span></span> СЃРј.)</span></td>
+								<td align="right"><button class="delete" title="РЈРґР°Р»РёС‚СЊ СЃРµРєС†РёСЋ">X</button></td>
 							</tr>
 						</table>
 					</td>
@@ -362,18 +360,18 @@
 										<tr>
 											<td width="50%" style="padding-right: 5px;">
 												<div class="pans">
-													<div class="label">Полок, шт.:</div>
+													<div class="label">РџРѕР»РѕРє, С€С‚.:</div>
 													<div class="field"><input type="text" class="pans" name="pans" value="0"></div>
 												</div>
 											</td>
 											<td width="50%">
 												<div class="hanger">
-													<div class="label">Вешалка:</div>
+													<div class="label">Р’РµС€Р°Р»РєР°:</div>
 													<div class="field">
 														<select class="hanger" name="hanger">
-															<option value="0" selected>Без вешалки</option>
-															<option value="1">Торцевая</option>
-															<option value="2">Штанга</option>
+															<option value="0" selected>Р‘РµР· РІРµС€Р°Р»РєРё</option>
+															<option value="1">РўРѕСЂС†РµРІР°СЏ</option>
+															<option value="2">РЁС‚Р°РЅРіР°</option>
 														</select>
 													</div>
 												</div>
@@ -389,18 +387,18 @@
 											<tr>
 												<td class="baskets">
 													<div class="baskets">
-														<div class="label">Ящиков, шт.:</div>
+														<div class="label">РЇС‰РёРєРѕРІ, С€С‚.:</div>
 														<div class="field"><input type="text" class="baskets" name="baskets" value="0"></div>
 													</div>
 												</td>
 												<td class="basket">
 													<div class="basket">
-														<div class="label">Тип ящика:</div>
+														<div class="label">РўРёРї СЏС‰РёРєР°:</div>
 														<div class="field">
 															<select name="basket" class="basket">
-																<option value="0" selected>Без ящиков</option>
-																<option value="1">Корзина</option>
-																<option value="2">Ящик</option>
+																<option value="0" selected>Р‘РµР· СЏС‰РёРєРѕРІ</option>
+																<option value="1">РљРѕСЂР·РёРЅР°</option>
+																<option value="2">РЇС‰РёРє</option>
 															</select>
 														</div>
 													</div>
@@ -415,25 +413,25 @@
 				</tr>
 			</table>
 		</div>
-	<!-- / Управление секцией -->
+	<!-- / РЈРїСЂР°РІР»РµРЅРёРµ СЃРµРєС†РёРµР№ -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Группа управления дверями Вставка / Редактирование / Удаление -->
+	<!-- Р“СЂСѓРїРїР° СѓРїСЂР°РІР»РµРЅРёСЏ РґРІРµСЂСЏРјРё Р’СЃС‚Р°РІРєР° / Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ / РЈРґР°Р»РµРЅРёРµ -->
 		<table class="group-control-doors layout">
 			<tr>
 				<td class="control insert" valign="top"></td>
 			</tr>
 		</table>
-	<!-- / Группа управления дверями Вставка / Редактирование / Удаление -->
+	<!-- / Р“СЂСѓРїРїР° СѓРїСЂР°РІР»РµРЅРёСЏ РґРІРµСЂСЏРјРё Р’СЃС‚Р°РІРєР° / Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ / РЈРґР°Р»РµРЅРёРµ -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<!-- Управление дверью -->
+	<!-- РЈРїСЂР°РІР»РµРЅРёРµ РґРІРµСЂСЊСЋ -->
 		<div class="door-pane-update">
 			<table class="layout">
 				<tr>
 					<td class="header">
 						<table class="header layout">
 							<tr>
-								<td>Дверь № <span class="number">0</span></td>
-								<td align="right"><button class="delete" title="Удалить дверь">X</button></td>
+								<td>Р”РІРµСЂСЊ в„– <span class="number">0</span></td>
+								<td align="right"><button class="delete" title="РЈРґР°Р»РёС‚СЊ РґРІРµСЂСЊ">X</button></td>
 							</tr>
 						</table>
 					</td>
@@ -444,7 +442,7 @@
 							<tr>
 								<td class="col2">
 									<div class="filler">
-										<div class="label">Наполнение:</div>
+										<div class="label">РќР°РїРѕР»РЅРµРЅРёРµ:</div>
 										<div class="field">
 											<select class="filler" name="filler"></select>
 										</div>
@@ -454,7 +452,7 @@
 							<tr>
 								<td class="col2">
 									<div class="mdf">
-										<label><input type="checkbox" class="mdf" name="mdf" id="mdf" value=""> МДФ</label>
+										<label><input type="checkbox" class="mdf" name="mdf" id="mdf" value=""> РњР”Р¤</label>
 									</div>
 								</td>
 							</tr>
@@ -463,7 +461,7 @@
 				</tr>
 			</table>
 		</div>
-	<!-- / Управление дверью -->
+	<!-- / РЈРїСЂР°РІР»РµРЅРёРµ РґРІРµСЂСЊСЋ -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 </div>
 

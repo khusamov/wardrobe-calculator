@@ -1,5 +1,5 @@
 
-/* Секции */
+/* РЎРµРєС†РёРё */
 
 div.cupboard table.box td.section {
 	width: 100px;
@@ -18,7 +18,7 @@ div.cupboard table.box td.pane1e2a {
 	background-position: left top;
 }
 
-/* Секция */
+/* РЎРµРєС†РёСЏ */
 
 div.cupboard table.box td.section div.box0e32 {
 	background-image: url(images/box0e32.gif);
@@ -50,7 +50,7 @@ div.cupboard table.box td.section div.pane1e3 {
 	background-position: bottom left;
 }
 
-/* Секция / Последняя стенка */		
+/* РЎРµРєС†РёСЏ / РџРѕСЃР»РµРґРЅСЏСЏ СЃС‚РµРЅРєР° */		
 
 div.cupboard table.box td.end {
 	width: 26px;
